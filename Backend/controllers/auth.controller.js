@@ -15,7 +15,7 @@ export const signUp = async (req, res) => {
     if (password.length < 6) {
       return res
         .status(400)
-        .json({ message: "Password must pe atleast 6 characters !" });
+        .json({ message: "Password must pe at least 6 characters !" });
     }
     // Authentication for hashed password
     const hashedPassword = await bcrypt.hash(password, 10);
